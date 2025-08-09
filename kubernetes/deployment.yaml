@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: employee
-          image: <ECR_IMAGE_URL>
+          image: 203520860987.dkr.ecr.us-east-1.amazonaws.com/java_dev:latest
           ports:
             - containerPort: 8080
           env:
