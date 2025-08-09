@@ -41,7 +41,7 @@ pipeline {
           aws eks update-kubeconfig --name ${EKS_CLUSTER} --region ${AWS_REGION}
           # Option A: apply new manifest that references the image tag
           kubectl set image deployment/employee-deployment employee-container=${ECR_REPO}:${IMAGE_TAG} -n ${K8S_NAMESPACE} || \
-            kubectl apply -f k8s/deployment.yaml -n ${K8S_NAMESPACE}
+            kubectl apply -f kubernetes/deployment.yaml -n ${K8S_NAMESPACE}
         """
       }
     }
